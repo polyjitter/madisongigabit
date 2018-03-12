@@ -56,6 +56,12 @@ img.emoji {
   margin-left: 10px;
 }
 
+#header #header-right img {
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #header #header-logo {
   height: 50px;
 }
@@ -115,6 +121,27 @@ img.emoji {
   padding: 10px 0;
 }
 
+.section::after {
+  content: "";
+  float: left;
+  width: 100%;
+  margin: 0 0%;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.section:nth-child(3n - 2)::after {
+  background-color: #6748a1;
+}
+
+.section:nth-child(3n - 1)::after {
+  background-color: #22878a;
+}
+
+.section:nth-child(3n)::after {
+  background-color: #b1392d;
+}
+
 .info-item {
   display: flex;
   justify-content: space-between;
@@ -146,6 +173,10 @@ img.emoji {
 
 .info-item::after {
   margin-top: 10px;
+}
+
+.info-item:last-child::after {
+  content: none;
 }
 
 .item-image {
@@ -190,6 +221,7 @@ img.emoji {
   width: auto;
   background-color: #e7e7e5;
   margin-right: auto;
+  border-bottom: 3px solid #22878a;
   -webkit-border-radius: 20px 20px 20px 0;
   -moz-border-radius: 20px 20px 20px 0;
   -ms-border-radius: 20px 20px 20px 0;
@@ -200,6 +232,7 @@ img.emoji {
   width: 900px;
   background-color: #f4f4f2;
   margin-left: auto;
+  border-bottom: 3px solid #b1392d;
   -webkit-border-radius: 20px 20px 0 20px;
   -moz-border-radius: 20px 20px 0 20px;
   -ms-border-radius: 20px 20px 0 20px;
