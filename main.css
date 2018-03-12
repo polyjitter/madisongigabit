@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Source+Sans+Pro");
 h1 {
   color: #545454;
-  font: 25pt "Cabin", sans-serif;
+  font: 30pt "Comfortaa", sans-serif;
 }
 
 h2 {
-  font: 15pt bold "Cabin", sans-serif;
+  font: 15pt "Comfortaa", sans-serif;
+  font-weight: bold;
 }
 
 body {
@@ -30,7 +31,7 @@ img.emoji {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Cabin", sans-serif;
+  font-family: "Comfortaa", sans-serif;
 }
 
 #header #header-left {
@@ -38,11 +39,12 @@ img.emoji {
 }
 
 #header #header-right {
-  font-size: 18pt;
+  font-size: 15pt;
 }
 
-#header #header-right a {
-  color: #101010;
+#header #header-right a, #header #header-right img {
+  color: #545454;
+  margin-left: 10px;
 }
 
 #header #header-logo {
@@ -68,11 +70,11 @@ img.emoji {
 
 #splash #motto {
   margin: 20px;
-  font: 50pt "Cabin", sans-serif;
+  font: 50pt "Comfortaa", sans-serif;
 }
 
 #splash #submotto {
-  font: 30pt "Cabin", sans-serif;
+  font: 30pt "Comfortaa", sans-serif;
 }
 
 #page {
@@ -81,15 +83,31 @@ img.emoji {
   max-width: 1300px;
 }
 
+.item-image {
+  display: block;
+}
+
+.item-image img {
+  max-width: 40%;
+  margin: 20px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .faq-item {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .faq-item .question, .faq-item .answer {
   max-width: 100%;
   margin: 15px;
-  padding: 10px;
+  padding: 5px 20px;
 }
 
 .faq-item .question {
@@ -104,7 +122,7 @@ img.emoji {
 }
 
 .faq-item .answer {
-  width: 1200px;
+  width: 900px;
   background-color: #f4f4f2;
   margin-left: auto;
   -webkit-border-radius: 20px 20px 0 20px;
