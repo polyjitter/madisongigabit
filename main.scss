@@ -5,6 +5,9 @@ $content-font: "Source Sans Pro", sans-serif;
 $bg: #fcfcfa;
 $fg: #101010;
 $fade-fg: $fg + #444444;
+$purple: #6748a1;
+$cyan: #22878a;
+$red: b1392d;
 
 @mixin text-align($type) {
     text-align: $type;
@@ -16,6 +19,27 @@ $fade-fg: $fg + #444444;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
+}
+
+@mixin item-color() {
+    
+    & > *::after {
+        content: "";
+        float: left;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+    }
+
+    &:nth-child(3n - 2)::after {
+        background-color: $purple;
+    }
+    &:nth-child(3n - 1)::after {
+        background-color: $cyan;
+    }
+    &:nth-child(3n)::after {
+        background-color: $red;
+    }
 }
 
 h1 {
@@ -52,6 +76,11 @@ img.emoji {
     justify-content: space-between;
     align-items: center;
     font-family: $header-font;
+    position: fixed;
+    width: 100%;
+    background-color: $bg;
+    border-bottom: 3px solid $purple;
+    z-index: 1;
 
     #header-left {
         font-size: 28pt;
@@ -75,8 +104,9 @@ img.emoji {
     margin: 0;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    height: 650px;
     max-height: 100%;
+    border-bottom: 3px solid $cyan;
 
     @include text-align(center);
 
@@ -86,9 +116,22 @@ img.emoji {
         transform: translateY(-50%);
     }
 
+    #motto::after, #submotto::after {
+        content: "";
+        float: left;
+        width: auto;
+        height: 3px;
+        border-radius: 3px;
+    }
+
     #motto {
         margin: 20px;
         font: 50pt $header-font;
+
+    }
+
+    #motto::after {
+        background-color: #6748a1;
     }
 
     #submotto {

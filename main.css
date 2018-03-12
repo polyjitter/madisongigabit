@@ -32,6 +32,11 @@ img.emoji {
   justify-content: space-between;
   align-items: center;
   font-family: "Comfortaa", sans-serif;
+  position: fixed;
+  width: 100%;
+  background-color: #fcfcfa;
+  border-bottom: 3px solid #6748a1;
+  z-index: 1;
 }
 
 #header #header-left {
@@ -56,8 +61,9 @@ img.emoji {
   margin: 0;
   background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 650px;
   max-height: 100%;
+  border-bottom: 3px solid #22878a;
   text-align: center;
   -ms-text-align: center;
 }
@@ -68,9 +74,21 @@ img.emoji {
   transform: translateY(-50%);
 }
 
+#splash #motto::after, #splash #submotto::after {
+  content: "";
+  float: left;
+  width: auto;
+  height: 3px;
+  border-radius: 3px;
+}
+
 #splash #motto {
   margin: 20px;
   font: 50pt "Comfortaa", sans-serif;
+}
+
+#splash #motto::after {
+  background-color: #6748a1;
 }
 
 #splash #submotto {
