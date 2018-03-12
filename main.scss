@@ -27,6 +27,7 @@ $red: #b1392d;
         content: "";
         float: left;
         width: $width;
+        margin: 0 (100% - $width) / 2;
         height: 3px;
         border-radius: 3px;
     }
@@ -61,6 +62,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+li {
+    margin: 6px 0;
 }
 
 img.emoji {
@@ -152,47 +157,67 @@ img.emoji {
 }
 
 .section {
-    @include color-bar(100%);
     padding: 10px 0;
+}
+
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:40px 0;
+    
+    @include color-bar(60%);
+
+    &::after {
+        margin-top: 10px;
+    }
 }
 
 .item-image {
     display: block;
     
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
+
     img {
-        max-width: 40%;
-        margin: 20px;
+        max-width: 300px;
+    }
+
+    right {
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
     }
 }
 
-.info-item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 30px 0;
-}
-
-.info-item:nth-child(2n) {
-    background-color: $bg - #101010;
+#gigabit-breakdown {
+    font-family: $header-font;
+    font-size: 40pt;
+    color: $fg + #666666;
+    margin: 50px;
+    text-align: center;
 }
 
 .faq-item {
     width: 100%;
     max-width: 1000px;
     margin: auto;
-
+    
     .question, .answer {
         max-width: 100%;
         margin: 15px;
         padding: 5px 20px;
     }
-
+    
     .question {
         display: inline-block;
         width: auto;
         background-color: $bg - #151515;
         margin-right: auto;
-
+        
         @include border-radius(20px 20px 20px 0);
     }
 
