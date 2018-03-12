@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Noto+Sans");
 
 $header-font: "Comfortaa", sans-serif;
-$content-font: "Source Sans Pro", sans-serif;
+$content-font: "Noto Sans", sans-serif;
 $bg: #fcfcfa;
 $fg: #101010;
 $fade-fg: $fg + #444444;
 $purple: #6748a1;
 $cyan: #22878a;
-$red: b1392d;
+$red: #b1392d;
 
 @mixin text-align($type) {
     text-align: $type;
@@ -21,12 +21,12 @@ $red: b1392d;
     border-radius: $radius;
 }
 
-@mixin item-color() {
+@mixin color-bar($width) {
     
-    & > *::after {
+    &::after {
         content: "";
         float: left;
-        width: 100%;
+        width: $width;
         height: 3px;
         border-radius: 3px;
     }
@@ -54,7 +54,7 @@ h2 {
 
 body {
     margin: 0;
-    font: 100% $content-font;
+    font: 13pt $content-font;
     background-color: $bg;
     color: $fg;
 }
@@ -130,8 +130,14 @@ img.emoji {
 
     }
 
-    #motto::after {
-        background-color: #6748a1;
+    #splash-content::after {
+        content: "";
+        float: left;
+        width: 10%;
+        height: 3px;
+        margin: 15px 45%;
+        border-radius: 3px;
+        background-color: $red;
     }
 
     #submotto {
@@ -143,6 +149,11 @@ img.emoji {
     margin: auto;
     padding: 30px;
     max-width: 1300px;
+}
+
+.section {
+    @include color-bar(100%);
+    padding: 10px 0;
 }
 
 .item-image {
@@ -158,6 +169,11 @@ img.emoji {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin: 30px 0;
+}
+
+.info-item:nth-child(2n) {
+    background-color: $bg - #101010;
 }
 
 .faq-item {
@@ -192,8 +208,9 @@ img.emoji {
 #updates-flex {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .update-item {
-        width: 300px;
+        width: 400px;
     }
 }
