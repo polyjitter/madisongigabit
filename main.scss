@@ -18,6 +18,7 @@ $fg: #101010;
 }
 
 h1 {
+    color: $fg + #111111;
     font: 20pt bold $header-font;
 }
 
@@ -96,13 +97,13 @@ img.emoji {
     max-width: 1400px;
 
     .question, .answer {
-        max-width: 1200px;
-        width: 80%;
+        max-width: 100%;
         margin: 15px;
-        padding: 25px;
+        padding: 5px;
     }
 
     .question {
+        width: auto;
         background-color: $bg - #151515;
         margin-right: auto;
 
@@ -110,6 +111,7 @@ img.emoji {
     }
 
     .answer {
+        width: 1200px;
         background-color: $bg - #080808;
         margin-left: auto;
 
@@ -117,10 +119,16 @@ img.emoji {
     }
 }
 
-#updates {
+#updates-flex {
     display: flex;
+    flex-wrap: wrap;                                                                                                                                                                    
+
+    .section-header {
+        flex: 0 1 100%;
+    }
 
     .update-item {
+        flex: 1 0 50%;
         width: 500px;
     }
 }

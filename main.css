@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Source+Sans+Pro");
 h1 {
+  color: #212121;
   font: 20pt bold "Cabin", sans-serif;
 }
 
@@ -78,13 +79,13 @@ img.emoji {
 }
 
 .faq-item .question, .faq-item .answer {
-  max-width: 1200px;
-  width: 80%;
+  max-width: 100%;
   margin: 15px;
-  padding: 25px;
+  padding: 5px;
 }
 
 .faq-item .question {
+  width: auto;
   background-color: #e7e7e5;
   margin-right: auto;
   -webkit-border-radius: 20px 20px 20px 0;
@@ -94,6 +95,7 @@ img.emoji {
 }
 
 .faq-item .answer {
+  width: 1200px;
   background-color: #f4f4f2;
   margin-left: auto;
   -webkit-border-radius: 20px 20px 0 20px;
@@ -102,10 +104,16 @@ img.emoji {
   border-radius: 20px 20px 0 20px;
 }
 
-#updates {
+#updates-flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
-#updates .update-item {
+#updates-flex .section-header {
+  flex: 0 1 100%;
+}
+
+#updates-flex .update-item {
+  flex: 1 0 50%;
   width: 500px;
 }
