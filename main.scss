@@ -10,6 +10,13 @@ $fg: #101010;
     -ms-text-align: $type;
 }
 
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
 h1 {
     font: 20pt bold $header-font;
 }
@@ -80,6 +87,40 @@ img.emoji {
 
 #page {
     margin: auto;
+    padding: 30px;
+    max-width: 1400px;
+}
+
+.faq-item {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1400px;
+
+    .question, .answer {
+        max-width: 1200px;
+        width: 80%;
+        margin: 15px;
+        padding: 25px;
+    }
+
+    .question {
+        background-color: $bg - #151515;
+        margin-right: auto;
+
+        @include border-radius(20px 20px 20px 0);
+    }
+
+    .answer {
+        background-color: $bg - #080808;
+        margin-left: auto;
+
+        @include border-radius(20px 20px 0 20px);
+    }
+}
+
+#updates {
+    display: flex;
+
+    .update-item {
+        width: 500px;
+    }
 }

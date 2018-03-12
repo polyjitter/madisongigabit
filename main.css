@@ -68,6 +68,44 @@ img.emoji {
 
 #page {
   margin: auto;
+  padding: 30px;
+  max-width: 1400px;
+}
+
+.faq-item {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
+}
+
+.faq-item .question, .faq-item .answer {
+  max-width: 1200px;
+  width: 80%;
+  margin: 15px;
+  padding: 25px;
+}
+
+.faq-item .question {
+  background-color: #e7e7e5;
+  margin-right: auto;
+  -webkit-border-radius: 20px 20px 20px 0;
+  -moz-border-radius: 20px 20px 20px 0;
+  -ms-border-radius: 20px 20px 20px 0;
+  border-radius: 20px 20px 20px 0;
+}
+
+.faq-item .answer {
+  background-color: #f4f4f2;
+  margin-left: auto;
+  -webkit-border-radius: 20px 20px 0 20px;
+  -moz-border-radius: 20px 20px 0 20px;
+  -ms-border-radius: 20px 20px 0 20px;
+  border-radius: 20px 20px 0 20px;
+}
+
+#updates {
+  display: flex;
+}
+
+#updates .update-item {
+  width: 500px;
 }
