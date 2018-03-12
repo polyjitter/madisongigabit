@@ -221,7 +221,7 @@ img.emoji {
   width: auto;
   background-color: #e7e7e5;
   margin-right: auto;
-  border-bottom: 4px solid #22878a;
+  border-bottom: 3px solid #22878a;
   -webkit-border-radius: 20px 20px 20px 0;
   -moz-border-radius: 20px 20px 20px 0;
   -ms-border-radius: 20px 20px 20px 0;
@@ -232,7 +232,7 @@ img.emoji {
   width: 900px;
   background-color: #f4f4f2;
   margin-left: auto;
-  border-bottom: 4px solid #b1392d;
+  border-bottom: 3px solid #b1392d;
   -webkit-border-radius: 20px 20px 0 20px;
   -moz-border-radius: 20px 20px 0 20px;
   -ms-border-radius: 20px 20px 0 20px;

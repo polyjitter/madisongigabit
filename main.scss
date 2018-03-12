@@ -228,7 +228,7 @@ img.emoji {
         width: auto;
         background-color: $bg - #151515;
         margin-right: auto;
-        border-bottom: 4px solid $cyan;
+        border-bottom: 3px solid $cyan;
 
         @include border-radius(20px 20px 20px 0);
     }
@@ -237,7 +237,7 @@ img.emoji {
         width: 900px;
         background-color: $bg - #080808;
         margin-left: auto;
-        border-bottom: 4px solid $red;
+        border-bottom: 3px solid $red;
 
         @include border-radius(20px 20px 0 20px);
     }
