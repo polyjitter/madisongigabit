@@ -30,7 +30,7 @@ img.emoji {
 }
 
 #header {
-  padding: 10px;
+  padding: 10px 0;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -44,19 +44,25 @@ img.emoji {
 }
 
 #header #header-left {
+  margin-left: 10px;
   font-size: 28pt;
 }
 
 #header #header-right {
+  margin: 0 10px;
   font-size: 15pt;
 }
 
 #header #header-right a, #header #header-right img {
   color: #545454;
-  margin-left: 10px;
+}
+
+#header #header-right a {
+  margin-right: 10px;
 }
 
 #header #header-right img {
+  margin-bottom: 3px;
   height: 20px;
   display: inline-block;
   vertical-align: middle;
@@ -213,6 +219,13 @@ img.emoji {
   font-family: "Comfortaa", sans-serif;
   font-size: 40pt;
   color: #767676;
+  margin: 50px;
+  text-align: center;
+}
+
+#manmade-header {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 20pt;
   margin: 50px;
   text-align: center;
 }

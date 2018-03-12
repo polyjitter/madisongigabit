@@ -75,7 +75,7 @@ img.emoji {
 }
 
 #header {
-    padding: 10px;
+    padding: 10px 0;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -88,17 +88,23 @@ img.emoji {
     z-index: 1;
 
     #header-left {
+        margin-left: 10px;
         font-size: 28pt;
     }
 
     #header-right {
+        margin: 0 10px;
         font-size: 15pt;
         a, img {
             color: $fade-fg;
-            margin-left: 10px;
+        }
+
+        a {
+            margin-right: 10px;
         }
 
         img {
+            margin-bottom: 3px;
             height: 20px;
             display: inline-block;
             vertical-align: middle;
@@ -221,6 +227,14 @@ img.emoji {
     margin: 50px;
     text-align: center;
 }
+
+#manmade-header {
+    font-family: $header-font;
+    font-size: 20pt;
+    margin:50px;
+    text-align: center;
+}
+
 
 .faq-item {
     width: 100%;
