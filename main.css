@@ -394,3 +394,12 @@ img.emoji {
     padding: 5px 10px;
   }
 }
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .manmade-item {
+    display: block;
+  }
+  .manmade-item .item-content {
+    width: 100%;
+  }
+}

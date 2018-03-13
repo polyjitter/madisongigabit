@@ -415,3 +415,14 @@ img.emoji {
         padding: 5px 10px;
     }
 }
+
+// IE 10/11 Fallbacks
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    .manmade-item {
+        display: block;
+
+        .item-content {
+            width: 100%;
+        }
+    }
+}

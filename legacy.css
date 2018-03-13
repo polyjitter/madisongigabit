@@ -1,0 +1,7 @@
+.manmade-item {
+    display: block;
+}
+
+.manmade-item .item-content {
+    width: 100%;
+}
