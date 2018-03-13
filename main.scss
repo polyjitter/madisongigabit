@@ -305,7 +305,7 @@ img.emoji {
 #updates-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 10px;
 
     .update-item {
