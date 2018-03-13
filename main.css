@@ -40,7 +40,7 @@ img.emoji {
   width: 100%;
   background-color: #fcfcfa;
   border-bottom: 3px solid #6748a1;
-  z-index: 1;
+  z-index: 2;
 }
 
 #header #header-left {
@@ -72,6 +72,24 @@ img.emoji {
   height: 50px;
 }
 
+#subheader {
+  display: none;
+  position: fixed;
+  top: 57px;
+  background-color: #ebebe9;
+  width: 100%;
+  font: 12pt "Comfortaa", sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1;
+  border-bottom: 3px solid #b1392d;
+}
+
+#subheader a {
+  color: #545454;
+  margin: 0 5px;
+}
+
 #splash {
   display: inline-block;
   margin: 0;
@@ -88,14 +106,6 @@ img.emoji {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-#splash #motto::after, #splash #submotto::after {
-  content: "";
-  float: left;
-  width: auto;
-  height: 3px;
-  border-radius: 3px;
 }
 
 #splash #motto {
@@ -119,7 +129,7 @@ img.emoji {
 
 #page {
   margin: auto;
-  padding: 30px;
+  padding: 10px;
   max-width: 1300px;
 }
 
@@ -130,8 +140,8 @@ img.emoji {
 .section::after {
   content: "";
   float: left;
-  width: 100%;
-  margin: 0 0%;
+  width: 40%;
+  margin: 0 30%;
   height: 3px;
   border-radius: 3px;
 }
@@ -161,6 +171,10 @@ img.emoji {
   border-radius: 10px 10px 3px 3px;
 }
 
+.item-content {
+  max-width: 100%;
+}
+
 .info-item {
   display: flex;
   justify-content: space-between;
@@ -172,8 +186,8 @@ img.emoji {
 .info-item::after {
   content: "";
   float: left;
-  width: 60%;
-  margin: 0 20%;
+  width: 20%;
+  margin: 0 40%;
   height: 3px;
   border-radius: 3px;
 }
@@ -207,7 +221,8 @@ img.emoji {
 }
 
 .item-image img {
-  max-width: 300px;
+  width: 300px;
+  max-width: 100%;
 }
 
 .item-image right {
@@ -217,9 +232,9 @@ img.emoji {
 
 #gigabit-breakdown {
   font-family: "Comfortaa", sans-serif;
-  font-size: 40pt;
+  font-size: 30pt;
   color: #767676;
-  margin: 50px;
+  margin: 50px auto;
   text-align: center;
 }
 
@@ -232,13 +247,13 @@ img.emoji {
 
 .faq-item {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
 .faq-item .question, .faq-item .answer {
-  max-width: 100%;
-  margin: 15px;
+  max-width: 90%;
+  margin: 15px 0;
   padding: 5px 20px;
 }
 
@@ -274,4 +289,62 @@ img.emoji {
 
 #updates-flex .update-item {
   width: 400px;
+  text-align: center;
+}
+
+#footer {
+  padding: 20px;
+  font-family: "Comfortaa", sans-serif;
+  background-color: #ebebe9;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  #splash {
+    height: 450px;
+  }
+  #splash #motto {
+    font-size: 40pt;
+  }
+  #splash #submotto {
+    font-size: 20pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    justify-content: center;
+    height: 35px;
+  }
+  #header #header-left {
+    margin-left: 0;
+  }
+  #header #header-right {
+    display: none;
+  }
+  #header #header-logo {
+    height: 35px;
+  }
+  #splash #motto {
+    font-size: 30pt;
+  }
+  #gigabit-breakdown {
+    font-size: 20pt;
+  }
+  #manmade-header {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18pt;
+  }
+  #subheader {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .faq-item .answer {
+    width: 95%;
+    padding: 5px 10px;
+  }
 }

@@ -1,5 +1,7 @@
+// Imports our fonts
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Noto+Sans");
 
+// All typography and color pallete for the page.
 $header-font: "Comfortaa", sans-serif;
 $content-font: "Noto Sans", sans-serif;
 $bg: #fcfcfa;
@@ -9,6 +11,7 @@ $purple: #6748a1;
 $cyan: #22878a;
 $red: #b1392d;
 
+// mixins for special rendering engine properties
 @mixin text-align($type) {
     text-align: $type;
     -ms-text-align: $type;
@@ -21,6 +24,7 @@ $red: #b1392d;
     border-radius: $radius;
 }
 
+// Creates autocolored bars down the page. Uses nth-child arithmetic.
 @mixin color-bar($width) {
     
     &::after {
@@ -43,6 +47,7 @@ $red: #b1392d;
     }
 }
 
+// Default tags
 h1 {
     color: $fade-fg;
     font: 30pt $header-font;
@@ -68,12 +73,13 @@ li {
     margin: 6px 0;
 }
 
+// Styles twemoji emoji, when working
 img.emoji {
-    // Override any img styles to ensure Emojis are displayed inline
     margin: 0px !important;
     display: inline !important;
 }
 
+// Header is a flexbox
 #header {
     padding: 10px 0;
     height: 50px;
@@ -85,7 +91,7 @@ img.emoji {
     width: 100%;
     background-color: $bg;
     border-bottom: 3px solid $purple;
-    z-index: 1;
+    z-index: 2;
 
     #header-left {
         margin-left: 10px;
@@ -116,6 +122,25 @@ img.emoji {
     }
 }
 
+// Doesn't show up unless on small devices!
+#subheader {
+    display: none;
+    position: fixed;
+    top: 57px;
+    background-color: $bg - #111111;
+    width: 100%;
+    font: 12pt $header-font;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+    border-bottom: 3px solid $red;
+    
+    a {
+        color: $fade-fg;
+        margin: 0 5px;
+    }
+}
+
 #splash {
     display: inline-block;
     margin: 0;
@@ -129,16 +154,8 @@ img.emoji {
 
     #splash-content {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    #motto::after, #submotto::after {
-        content: "";
-        float: left;
-        width: auto;
-        height: 3px;
-        border-radius: 3px;
+        top: 50%;  // HACK Centers the splash content
+        transform: translateY(-50%);  // ditto
     }
 
     #motto {
@@ -147,6 +164,7 @@ img.emoji {
 
     }
 
+    // Special color-bar for #splash-content
     #splash-content::after {
         content: "";
         float: left;
@@ -164,13 +182,13 @@ img.emoji {
 
 #page {
     margin: auto;
-    padding: 30px;
+    padding: 10px;
     max-width: 1300px;
 }
 
 .section {
     padding: 10px 0;
-    @include color-bar(100%)
+    @include color-bar(40%)
 }
 
 .item-heading {
@@ -179,9 +197,13 @@ img.emoji {
     background-color: $bg - #111111;
     padding: 5px 10px 0;
     margin: 5px 0;
-    border-bottom: 3px solid $purple;
+    border-bottom: 3px solid $purple;  // Gives a tab-like effect
     
     @include border-radius(10px 10px 3px 3px);
+}
+
+.item-content {
+    max-width: 100%;
 }
 
 .info-item {
@@ -191,7 +213,7 @@ img.emoji {
     width: 100%;
     margin:40px 0;
     
-    @include color-bar(60%);
+    @include color-bar(20%);
 
     &::after {
         margin-top: 10px;
@@ -211,7 +233,8 @@ img.emoji {
     padding: 10px;
 
     img {
-        max-width: 300px;
+        width: 300px;
+        max-width: 100%;
     }
 
     right {
@@ -222,9 +245,9 @@ img.emoji {
 
 #gigabit-breakdown {
     font-family: $header-font;
-    font-size: 40pt;
+    font-size: 30pt;
     color: $fg + #666666;
-    margin: 50px;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -238,12 +261,12 @@ img.emoji {
 
 .faq-item {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     
     .question, .answer {
-        max-width: 100%;
-        margin: 15px;
+        max-width: 90%;
+        margin: 15px 0;
         padding: 5px 20px;
     }
     
@@ -275,5 +298,74 @@ img.emoji {
 
     .update-item {
         width: 400px;
+        text-align: center;  // Centers both the item and the header.
+    }
+}
+
+#footer {
+    padding: 20px;
+    font-family: $header-font;
+    background-color: $bg - #111111;
+    text-align: center;
+}
+
+// Smaller screen sizes make the splash smaller
+@media only screen and (max-width: 1150px) {
+    #splash {
+        height: 450px;
+
+        #motto {
+            font-size: 40pt;
+        }
+        #submotto {
+            font-size: 20pt;
+        }
+    }
+}
+
+// Mobile devices hide the #header-right and show the #sub-header
+@media only screen and (max-width: 600px) {
+    #header {
+        justify-content: center;
+        height: 35px;
+
+        #header-left {
+            margin-left: 0;
+        }
+
+        #header-right {
+            display: none;
+        }
+
+        #header-logo {
+            height: 35px;
+        }
+    }
+
+    #splash #motto {
+        font-size: 30pt;
+    }
+
+    #gigabit-breakdown {
+        font-size: 20pt;
+    }
+
+    #manmade-header {
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 18pt;
+    }
+
+    #subheader {
+        display: block;
+    }
+}
+
+// Super small devices have some special styles for the faq to keep it readable.
+@media only screen and (max-width: 310px) {
+    .faq-item .answer {
+        width: 95%;
+        padding: 5px 10px;
     }
 }
