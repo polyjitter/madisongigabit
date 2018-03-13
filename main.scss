@@ -271,7 +271,6 @@ img.emoji {
     text-align: center;
 }
 
-
 .faq-item {
     width: 100%;
     max-width: 1200px;
@@ -300,6 +299,10 @@ img.emoji {
         border-bottom: 3px solid $red;
 
         @include border-radius(20px 20px 0 20px);
+    }
+
+    &:last-child {
+        margin-bottom: 30px;
     }
 }
 
