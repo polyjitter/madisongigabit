@@ -67,6 +67,7 @@ body {
 
 a {
     text-decoration: none;
+    color: $cyan;
 }
 
 li {
@@ -312,6 +313,13 @@ img.emoji {
         width: 400px;
         max-width: 100%;
         text-align: center;  // Centers both the item and the header.
+    }
+}
+
+#contact-links {
+    text-align: center;
+    a {
+        font: 14pt $header-font;
     }
 }
 

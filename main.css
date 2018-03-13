@@ -18,6 +18,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #22878a;
 }
 
 li {
@@ -302,6 +303,14 @@ img.emoji {
   width: 400px;
   max-width: 100%;
   text-align: center;
+}
+
+#contact-links {
+  text-align: center;
+}
+
+#contact-links a {
+  font: 14pt "Comfortaa", sans-serif;
 }
 
 #footer {
