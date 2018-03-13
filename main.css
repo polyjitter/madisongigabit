@@ -134,7 +134,7 @@ img.emoji {
 }
 
 .section {
-  padding: 10px 0;
+  margin: 10px 0;
 }
 
 .section::after {
@@ -156,6 +156,17 @@ img.emoji {
 
 .section:nth-child(3n)::after {
   background-color: #b1392d;
+}
+
+.section::before {
+  display: block;
+  content: "";
+  margin-top: -70px;
+  height: 70px;
+}
+
+.section:last-child::after {
+  display: none;
 }
 
 .item-heading {
@@ -298,6 +309,7 @@ img.emoji {
   font-family: "Comfortaa", sans-serif;
   background-color: #ebebe9;
   text-align: center;
+  border-top: 3px solid #6748a1;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -340,6 +352,10 @@ img.emoji {
   }
   #subheader {
     display: block;
+  }
+  .section::before {
+    margin-top: -90px;
+    height: 90px;
   }
 }
 

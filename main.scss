@@ -187,8 +187,20 @@ img.emoji {
 }
 
 .section {
-    padding: 10px 0;
-    @include color-bar(40%)
+    margin: 10px 0;
+    @include color-bar(40%);
+    
+    // Fixes internal link position
+    &::before {
+        display: block;
+        content: "";
+        margin-top: -70px;
+        height: 70px;
+    }
+
+    &:last-child::after {
+        display: none;
+    }
 }
 
 .item-heading {
@@ -308,6 +320,7 @@ img.emoji {
     font-family: $header-font;
     background-color: $bg - #111111;
     text-align: center;
+    border-top: 3px solid $purple;
 }
 
 // Smaller screen sizes make the splash smaller
@@ -360,6 +373,11 @@ img.emoji {
 
     #subheader {
         display: block;
+    }
+
+    .section::before {
+        margin-top: -90px;
+        height: 90px;
     }
 }
 
