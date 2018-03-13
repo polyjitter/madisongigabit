@@ -301,6 +301,7 @@ img.emoji {
 
 #updates-flex .update-item {
   width: 400px;
+  margin-bottom: 30px;
   max-width: 100%;
   text-align: center;
 }
