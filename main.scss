@@ -271,6 +271,21 @@ img.emoji {
     text-align: center;
 }
 
+.manmade-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item-content {
+        width: 70%;
+        flex-grow: 2;
+    }
+
+    .item-image {
+        flex-grow: 1;
+    }
+}
+
 .faq-item {
     width: 100%;
     max-width: 1200px;
