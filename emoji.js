@@ -1,7 +1,8 @@
-window.onload = function() {
+object.onload = function() {
 
   // Set the size of the rendered Emojis
   // This can be set to 16x16, 36x36, or 72x72
+  alert("lets go!");
 
   // Parse the document body and
   // insert <img> tags in place of Unicode Emojis
