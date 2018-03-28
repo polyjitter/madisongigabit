@@ -91,6 +91,21 @@ img.emoji {
   margin: 0 5px;
 }
 
+#side-panel {
+  width: 360px;
+  box-sizing: border-box;
+  box-shadow: 4px 0 18px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  top: 73px;
+  height: 100%;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  background-color: #ebebe9;
+  left: auto;
+  right: 0;
+}
+
 #splash {
   display: inline-block;
   margin: 0;
@@ -323,6 +338,50 @@ img.emoji {
   margin-bottom: 30px;
   max-width: 100%;
   text-align: center;
+}
+
+#form-div {
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#form-div .form-field {
+  display: block;
+  width: 500px;
+}
+
+#form-div input {
+  margin: 6px 2px;
+  width: 500px;
+  max-width: 90%;
+  border: 1px solid #22878a;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#form-div #contact-address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#form-div #contact-address #street {
+  width: 40%;
+}
+
+#form-div #contact-address #city {
+  width: 30%;
+}
+
+#form-div #contact-address #state {
+  width: 10%;
+}
+
+#form-div #contact-address #zipcode {
+  width: 20%;
 }
 
 #contact-links {

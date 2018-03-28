@@ -26,12 +26,11 @@ $red: #b1392d;
 
 // Creates autocolored bars down the page. Uses nth-child arithmetic.
 @mixin color-bar($width) {
-    
     &::after {
         content: "";
         float: left;
         width: $width;
-        margin: 0 (100% - $width) / 2;
+        margin: 0 ((100% - $width) / 2);
         height: 3px;
         border-radius: 3px;
     }
@@ -39,9 +38,11 @@ $red: #b1392d;
     &:nth-child(3n - 2)::after {
         background-color: $purple;
     }
+
     &:nth-child(3n - 1)::after {
         background-color: $cyan;
     }
+
     &:nth-child(3n)::after {
         background-color: $red;
     }
@@ -102,6 +103,7 @@ img.emoji {
     #header-right {
         margin: 0 10px;
         font-size: 15pt;
+
         a, img {
             color: $fade-fg;
         }
@@ -135,11 +137,26 @@ img.emoji {
     padding: 10px 0;
     z-index: 1;
     border-bottom: 3px solid $red;
-    
+
     a {
         color: $fade-fg;
         margin: 0 5px;
     }
+}
+
+#side-panel {
+    width: 360px;
+    box-sizing: border-box;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    top: 73px;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    background-color: $bg - #111111;
+    left: auto;
+    right: 0;
 }
 
 #splash {
@@ -155,14 +172,14 @@ img.emoji {
 
     #splash-content {
         position: relative;
-        top: 50%;  // HACK Centers the splash content
-        transform: translateY(-50%);  // ditto
+        top: 50%; // HACK Centers the splash content
+        transform: translateY(-50%); // ditto
+   
     }
 
     #motto {
         margin: 20px;
         font: 50pt $header-font;
-
     }
 
     // Special color-bar for #splash-content
@@ -189,8 +206,9 @@ img.emoji {
 
 .section {
     margin: 10px 0;
+
     @include color-bar(40%);
-    
+
     // Fixes internal link position
     &::before {
         display: block;
@@ -210,8 +228,8 @@ img.emoji {
     background-color: $bg - #111111;
     padding: 5px 10px 0;
     margin: 5px 0;
-    border-bottom: 3px solid $purple;  // Gives a tab-like effect
-    
+    border-bottom: 3px solid $purple; // Gives a tab-like effect
+
     @include border-radius(10px 10px 3px 3px);
 }
 
@@ -224,8 +242,8 @@ img.emoji {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin:40px 0;
-    
+    margin: 40px 0;
+
     @include color-bar(20%);
 
     &::after {
@@ -239,7 +257,6 @@ img.emoji {
 
 .item-image {
     display: block;
-    
     width: 100%;
     max-width: 300px;
     margin: auto;
@@ -267,7 +284,7 @@ img.emoji {
 #manmade-header {
     font-family: $header-font;
     font-size: 20pt;
-    margin:50px;
+    margin: 50px;
     text-align: center;
 }
 
@@ -290,13 +307,13 @@ img.emoji {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    
+
     .question, .answer {
         max-width: 90%;
         margin: 15px 0;
         padding: 5px 20px;
     }
-    
+
     .question {
         display: inline-block;
         width: auto;
@@ -331,12 +348,58 @@ img.emoji {
         width: 400px;
         margin-bottom: 30px;
         max-width: 100%;
-        text-align: center;  // Centers both the item and the header.
+        text-align: center; // Centers both the item and the header.
+   
+    }
+}
+
+#form-div {
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .form-field {
+        display: block;
+        width: 500px;
+    }
+
+    input {
+        margin: 6px 2px;
+        width: 500px;
+        max-width: 90%;
+        border: 1px solid $cyan;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    #contact-address {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        #street {
+            width: 40%;
+        }
+
+        #city {
+            width: 30%;
+        }
+
+        #state {
+            width: 10%;
+        }
+
+        #zipcode {
+            width: 20%;
+        }
     }
 }
 
 #contact-links {
     text-align: center;
+
     a {
         font: 14pt $header-font;
     }
@@ -358,6 +421,7 @@ img.emoji {
         #motto {
             font-size: 40pt;
         }
+
         #submotto {
             font-size: 20pt;
         }
@@ -417,7 +481,7 @@ img.emoji {
 }
 
 // IE 10/11 Fallbacks
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     .manmade-item {
         display: block;
 
