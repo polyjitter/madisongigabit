@@ -341,11 +341,15 @@ img.emoji {
 }
 
 #form-div {
-  width: 100%;
+  width: 600px;
+  max-width: 90%;
+  margin: auto;
   justify-content: space-around;
+  align-items: center;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #form-div .form-field {
@@ -354,10 +358,11 @@ img.emoji {
 }
 
 #form-div input {
+  padding: 10px 0;
   margin: 6px 2px;
   width: 500px;
-  max-width: 90%;
-  border: 1px solid #22878a;
+  max-width: 100%;
+  border: 2px solid #22878a;
   border-radius: 5px;
   text-align: center;
 }
@@ -365,7 +370,9 @@ img.emoji {
 #form-div #contact-address {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-div #contact-address #street {
